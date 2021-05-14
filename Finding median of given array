@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int FindMedian(vector<int> v){
+int n=v.size();
+if(n%2==1){
+    return v[n/2];
+}
+else{
+    return (v[n/2]+v[(n-1)/2])/2;
+}
+
+
+}
+
+int main(){
+    int t; cin>>t;   // no of test cases
+    while(t--){
+        int size;  cin>>size;
+        int element;
+        vector<int> v;
+        for(int i=0;i<size;i++){
+            cin>>element;
+            v.push_back(element);
+        }
+
+        cout<<"median of given array is : "<<FindMedian(v)<<endl;
+
+    }
+
+    return 0;
+}
